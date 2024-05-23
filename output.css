@@ -710,25 +710,28 @@ video {
   top: 0px;
 }
 
-.top-\[14rem\] {
-  top: 14rem;
+.top-\[19\.5rem\] {
+  top: 19.5rem;
 }
 
-.top-\[18\.5rem\] {
-  top: 18.5rem;
+.top-\[25rem\] {
+  top: 25rem;
 }
 
-.top-\[20\.938rem\] {
-  top: 20.938rem;
+.top-\[26\.438rem\] {
+  top: 26.438rem;
 }
 
-.top-\[3\.75rem\] {
-  top: 3.75rem;
+.top-\[5\.5rem\] {
+  top: 5.5rem;
 }
 
-.mx-\[6\.5rem\] {
-  margin-left: 6.5rem;
-  margin-right: 6.5rem;
+.top-\[9\.25rem\] {
+  top: 9.25rem;
+}
+
+.-z-10 {
+  z-index: -10;
 }
 
 .mx-auto {
@@ -750,6 +753,10 @@ video {
 
 .mt-\[5\.425rem\] {
   margin-top: 5.425rem;
+}
+
+.mt-\[7\.5rem\] {
+  margin-top: 7.5rem;
 }
 
 .flex {
@@ -826,6 +833,10 @@ video {
 
 .h-\[7\.2rem\] {
   height: 7.2rem;
+}
+
+.h-\[76\.75rem\] {
+  height: 76.75rem;
 }
 
 .w-10 {
@@ -920,12 +931,21 @@ video {
   width: 70rem;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
 
 .grow {
   flex-grow: 1;
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -1067,28 +1087,32 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-circle-1 {
+  background-image: linear-gradient(160.99deg, rgba(239, 235, 255, 0) 29.95%, #E0EDFF 78.88% );
+}
+
+.bg-circle-2 {
+  background-image: linear-gradient(162.19deg, rgba(239, 235, 255, 0) 32.45%, #EBEBFB 79.35%);
+}
+
 .from-\[\#EFEBFF\] {
   --tw-gradient-from: #EFEBFF var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(239 235 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-\[\#ffffff\] {
-  --tw-gradient-from: #ffffff var(--tw-gradient-from-position);
+.from-on-primary-light {
+  --tw-gradient-from: #FFFFFF var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-\[\#E0EDFF\] {
-  --tw-gradient-to: #E0EDFF var(--tw-gradient-to-position);
 }
 
 .to-\[\#EBEBFB\] {
   --tw-gradient-to: #EBEBFB var(--tw-gradient-to-position);
 }
 
-.to-\[\#ecf4ff\] {
-  --tw-gradient-to: #ecf4ff var(--tw-gradient-to-position);
+.to-main-background {
+  --tw-gradient-to: #EBF3FF var(--tw-gradient-to-position);
 }
 
 .object-cover {
@@ -1117,6 +1141,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-\[6\.5rem\] {
+  padding-left: 6.5rem;
+  padding-right: 6.5rem;
 }
 
 .py-2 {
@@ -1273,6 +1302,10 @@ video {
 
 .opacity-50 {
   opacity: 0.5;
+}
+
+.opacity-60 {
+  opacity: 0.6;
 }
 
 .shadow-\[0_0_63px_0_rgba\(0\2c 0\2c 0\2c 0\.04\)\] {
