@@ -1195,6 +1195,11 @@ video {
   background-color: rgb(44 126 248 / var(--tw-bg-opacity));
 }
 
+.bg-background-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 237 239 / var(--tw-bg-opacity));
+}
+
 .bg-circle-1 {
   background-image: linear-gradient(160.99deg, rgba(239, 235, 255, 0) 29.95%, #E0EDFF 78.88% );
 }
@@ -1456,6 +1461,64 @@ video {
 .shadow-\[-3px-4px-16px-0px-\#00000000\] {
   --tw-shadow-color: -3px-4px-16px-0px-#00000000;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.hover\:bg-primary-hover-light:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 92 217 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\]:hover {
+  background-color: ;
+}
+
+.hover\:bg-\[\#E6F0FE\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 240 254 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[E1EBFE\]:hover {
+  background-color: E1EBFE;
+}
+
+.hover\:bg-\[\#E1EBFE\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 235 254 / var(--tw-bg-opacity));
+}
+
+.focus\:border-hidden:focus {
+  border-style: hidden;
+}
+
+.focus\:border-none:focus {
+  border-style: none;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 @media (min-width: 360px) {
