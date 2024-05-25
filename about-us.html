@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="rtl" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +8,10 @@
   </head>
   <body class="relative font-Yekan-bakh">
     <header
-      class="w-full h-[3.063rem] py-3 px-4 lg:px-[6.5rem] lg:py-6 lg:h-[5.5rem] shadow-[0px_4px_18px_0px_#1848900F] lg:shadow-none bg-on-primary-light sticky top-0"
+      class="w-full h-[3.063rem] py-3 px-4 lg:px-[6.5rem] lg:py-6 lg:h-[5.5rem] shadow-[0px_4px_18px_0px_#1848900F] lg:shadow-none bg-on-primary-light sticky top-0 dark:bg-header-dark"
     >
       <div class="lg:flex justify-between items-center">
-        <div
-          class="flex justify-between items-center w-full lg:w-[32.25rem]"
-        >
+        <div class="flex justify-between items-center w-full lg:w-[32.25rem]">
           <div class="v-6 h-6 lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,31 +40,35 @@
               />
             </svg>
           </div>
-          <div class="text-16 font-semibold w-[4.75] lg:w-[5.938rem] lg:text-20">کوئرا لیست</div>
+          <div
+            class="text-16 font-semibold w-[4.75] lg:w-[5.938rem] lg:text-20 dark:text-on-primary-light"
+          >
+            کوئرا لیست
+          </div>
           <div class="w-6 h-6 lg:hidden"></div>
           <nav
             class="hidden lg:flex justify-between items-center w-[21.813rem] h-[1.563rem]"
           >
             <a
               href="./index.html"
-              class="h-[1.563rem] font-semibold text-16 text-dark-gray"
+              class="h-[1.563rem] font-semibold text-16 text-dark-gray dark:text-nav-dark"
               >صفحه اصلی</a
             >
             <a
               href="./about-us.html"
-              class="h-[1.563rem] font-semibold text-16 text-primary"
+              class="h-[1.563rem] font-semibold text-16 text-primary dark:text-primary-dark"
               >درباره ما</a
             >
             <a
               href="./contact-us.html"
-              class="h-[1.563rem] font-semibold text-16 text-dark-gray"
+              class="h-[1.563rem] font-semibold text-16 text-dark-gray dark:text-nav-dark"
               >ارتباط با ما</a
             >
           </nav>
         </div>
         <div class="hidden lg:flex w-[13.938rem] justify-between">
           <button
-            class="w-[10.438rem] h-10 bg-primary rounded-[6px] text-on-primary-light font-semibold text-16 transition-colors duration-200 hover:bg-primary-hover-light"
+            class="w-[10.438rem] h-10 bg-primary rounded-[6px] text-on-primary-light font-semibold text-16 transition-colors duration-200 hover:bg-primary-hover-light dark:bg-primary-dark dark:hover:bg-primary-hover-dark"
           >
             ورود به اپلیکیشن
           </button>
@@ -74,6 +76,7 @@
             class="w-10 h-10 border border-solid border-[#E3E3E3] rounded-[6px] flex justify-center items-center"
           >
             <svg
+              class="dark:hidden"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -119,6 +122,20 @@
               <path
                 d="M22.5175 11.8276C21.552 11.5517 21.4141 11.2759 21.2072 10.1034C21.2072 10.0345 21.1382 9.96552 21.0692 9.96552C21.0003 9.96552 20.9313 10.0345 20.9313 10.1034C20.7244 11.2759 20.5175 11.4828 19.552 11.7586C19.483 11.7586 19.4141 11.8276 19.4141 11.9655C19.4141 12.0345 19.483 12.0345 19.483 12.1034C20.4485 12.3793 20.5865 12.6552 20.7934 13.8276C20.7934 13.8965 20.8623 13.9655 20.9313 13.9655C21.0003 13.9655 21.0692 13.8965 21.0692 13.8276C21.2761 12.6552 21.483 12.4483 22.4485 12.1724C22.5175 12.1724 22.5865 12.1034 22.5865 11.9655C22.5865 11.8965 22.5865 11.8276 22.5175 11.8276Z"
                 fill="#5C5F61"
+              />
+            </svg>
+            <svg class="hidden dark:block"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.4528 2.35651C11.0564 2.92408 10.9109 3.78313 10.6347 4.41723L10.6342 4.4184C10.2218 5.36102 9.9951 6.39431 10.0035 7.48732L10.0035 7.48998C10.0203 11.5459 13.3928 15.0084 17.5236 15.1774L17.5242 15.1774C18.1343 15.2028 18.7172 15.1605 19.2833 15.0592C19.6624 14.9902 20.0349 14.9778 20.3709 15.0562C20.7138 15.1361 21.059 15.3233 21.2736 15.6744C21.4872 16.0239 21.4971 16.4148 21.4166 16.7535C21.3374 17.087 21.1632 17.4135 20.9364 17.7209C18.9612 20.4231 15.6734 22.1339 12.0045 21.9748L12.004 21.9748C6.79694 21.7458 2.43907 17.5811 2.07846 12.4289C1.74905 7.86208 4.4596 3.88545 8.398 2.22456C9.03081 1.95654 9.87253 1.81093 10.4528 2.35651ZM9.36482 3.49126C9.27737 3.50302 9.15039 3.5348 8.9822 3.60611L8.98087 3.60668C5.59555 5.03433 3.29409 8.43675 3.57462 12.3217L3.57475 12.3234C3.88037 16.6955 7.6043 20.2796 12.0695 20.4762C15.2245 20.613 18.0394 19.1433 19.7264 16.8344L19.7287 16.8312C19.8304 16.6936 19.8903 16.5838 19.9243 16.5035C19.8389 16.4992 19.7164 16.5049 19.5511 16.5351L19.5487 16.5355C18.876 16.656 18.1834 16.7061 17.4623 16.6761C12.5496 16.4752 8.52446 12.374 8.50354 7.49753C8.49365 6.1869 8.7662 4.94596 9.25974 3.81768C9.32174 3.67519 9.35163 3.56714 9.36482 3.49126ZM9.4874 3.48881C9.48739 3.48883 9.48691 3.48872 9.48602 3.48846L9.4874 3.48881Z"
+                fill="#D8D8D8"
               />
             </svg>
           </button>

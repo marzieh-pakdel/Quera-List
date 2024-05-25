@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'selector',
   content: ["./*.{html,js}"],
   theme: {
     extend: {
@@ -31,6 +32,14 @@ module.exports = {
         "input-border": "#A1A1A1",
         placeholder: "#BCBCBC",
         "main-background": "#EBF3FF",
+
+        "primary-dark" : "#3A86F8",
+        "primary-hover-dark": "#6BA4FA",
+        "background-dark": "#040810",
+        "on-background-dark": "#E6E9EF",
+        "surface-dark": "#E6E9EF",
+        "header-dark": "#060C18",
+        "nav-dark": "#CFCFCF",
       },
 
       backgroundImage: {
