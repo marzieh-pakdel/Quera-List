@@ -41,7 +41,7 @@ module.exports = {
         "main-dark": "#060C18",
         "nav-dark": "#CFCFCF",
         "card-bg-dark": "#0B192D",
-        "light-text": "#E6E6E6",
+        "light-text-dark": "#E6E6E6",
       },
 
       backgroundImage: {
