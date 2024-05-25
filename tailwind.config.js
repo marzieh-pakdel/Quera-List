@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'selector',
+  darkMode: "selector",
   content: ["./*.{html,js}"],
   theme: {
     extend: {
@@ -33,13 +33,15 @@ module.exports = {
         placeholder: "#BCBCBC",
         "main-background": "#EBF3FF",
 
-        "primary-dark" : "#3A86F8",
+        "primary-dark": "#3A86F8",
         "primary-hover-dark": "#6BA4FA",
         "background-dark": "#040810",
         "on-background-dark": "#E6E9EF",
         "surface-dark": "#E6E9EF",
-        "header-dark": "#060C18",
+        "main-dark": "#060C18",
         "nav-dark": "#CFCFCF",
+        "card-bg-dark": "#0B192D",
+        "light-text": "#E6E6E6",
       },
 
       backgroundImage: {
@@ -50,7 +52,7 @@ module.exports = {
       },
 
       screens: {
-        lg: "360px",
+        lg: "800px",
       },
 
       fontFamily: {
@@ -59,6 +61,7 @@ module.exports = {
 
       fontWeight: {
         medium: "900",
+        extrrabold: "800",
         bold: "700",
         semibold: "600",
         regular: "400",
