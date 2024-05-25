@@ -36,8 +36,8 @@ module.exports = {
       backgroundImage: {
         "circle-1":
           "linear-gradient(160.99deg, rgba(239, 235, 255, 0) 29.95%, #E0EDFF 78.88% )",
-        "circle-2": 
-          'linear-gradient(162.19deg, rgba(239, 235, 255, 0) 32.45%, #EBEBFB 79.35%)',
+        "circle-2":
+          "linear-gradient(162.19deg, rgba(239, 235, 255, 0) 32.45%, #EBEBFB 79.35%)",
       },
 
       screens: {
