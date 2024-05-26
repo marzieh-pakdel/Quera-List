@@ -8,10 +8,10 @@
   </head>
   <body class="relative font-Yekan-bakh">
     <header
-      class="w-auto px-[6.5rem] py-6 h-[5.5rem] bg-on-primary-light sticky top-0"
+      class="w-full h-[3.063rem] py-3 px-4 lg:px-[6.5rem] lg:py-6 lg:h-[5.5rem] shadow-[0px_4px_18px_0px_#1848900F] lg:shadow-none bg-on-primary-light sticky top-0 dark:bg-main-dark"
     >
-      <div class="flex justify-between items-center">
-        <div class="flex justify-between w-[32.25rem] h-[1.938rem]">
+      <div class="lg:flex justify-between items-center">
+        <div class="flex justify-between items-center w-full lg:w-[32.25rem]">
           <div class="lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -21,18 +21,21 @@
               fill="none"
             >
               <path
+                class="dark:fill-neutral-11 dark:stroke-neutral-11"
                 d="M3 7.5H21"
                 stroke="#292D32"
                 stroke-width="1.5"
                 stroke-linecap="round"
               />
               <path
+                class="dark:fill-neutral-11 dark:stroke-neutral-11"
                 d="M3 12.5H21"
                 stroke="#292D32"
                 stroke-width="1.5"
                 stroke-linecap="round"
               />
               <path
+                class="dark:fill-neutral-11 dark:stroke-neutral-11"
                 d="M3 17.5H21"
                 stroke="#292D32"
                 stroke-width="1.5"
@@ -40,30 +43,35 @@
               />
             </svg>
           </div>
-          <div class="w-[5.938rem] font-semibold text-20">کوئرا لیست</div>
+          <div
+            class="text-16 font-semibold w-[4.75] lg:w-[5.938rem] lg:text-20 dark:text-on-primary-light"
+          >
+            کوئرا لیست
+          </div>
+          <div class="w-6 h-6 lg:hidden"></div>
           <nav
-            class="flex justify-between items-center w-[21.813rem] h-[1.563rem]"
+            class="hidden lg:flex justify-between items-center w-[21.813rem] h-[1.563rem]"
           >
             <a
               href="./index.html"
-              class="hidden lg:block h-[1.563rem] font-semibold text-16 text-dark-gray"
+              class="h-[1.563rem] font-semibold text-16 text-dark-gray dark:text-nav-dark"
               >صفحه اصلی</a
             >
             <a
               href="./about-us.html"
-              class="hidden lg:block h-[1.563rem] font-semibold text-16 text-dark-gray"
+              class="h-[1.563rem] font-semibold text-16 text-dark-gray dark:text-nav-dark"
               >درباره ما</a
             >
             <a
               href="./contact-us.html"
-              class="hidden lg:block h-[1.563rem] font-semibold text-16 text-primary"
+              class="h-[1.563rem] font-semibold text-16 text-primary dark:text-primary-dark"
               >ارتباط با ما</a
             >
           </nav>
         </div>
         <div class="hidden lg:flex w-[13.938rem] justify-between">
           <button
-            class="w-[10.438rem] h-10 bg-primary rounded-[6px] text-on-primary-light font-semibold text-16 transition-colors duration-200 hover:bg-primary-hover-light"
+            class="w-[10.438rem] h-10 bg-primary rounded-[6px] text-on-primary-light font-semibold text-16 transition-colors duration-200 hover:bg-primary-hover-light dark:bg-primary-dark dark:hover:bg-primary-hover-dark"
           >
             ورود به اپلیکیشن
           </button>
@@ -71,6 +79,7 @@
             class="w-10 h-10 border border-solid border-[#E3E3E3] rounded-[6px] flex justify-center items-center"
           >
             <svg
+              class="dark:hidden"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -118,23 +127,46 @@
                 fill="#5C5F61"
               />
             </svg>
+            <svg
+              class="hidden dark:block"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.4528 2.35651C11.0564 2.92408 10.9109 3.78313 10.6347 4.41723L10.6342 4.4184C10.2218 5.36102 9.9951 6.39431 10.0035 7.48732L10.0035 7.48998C10.0203 11.5459 13.3928 15.0084 17.5236 15.1774L17.5242 15.1774C18.1343 15.2028 18.7172 15.1605 19.2833 15.0592C19.6624 14.9902 20.0349 14.9778 20.3709 15.0562C20.7138 15.1361 21.059 15.3233 21.2736 15.6744C21.4872 16.0239 21.4971 16.4148 21.4166 16.7535C21.3374 17.087 21.1632 17.4135 20.9364 17.7209C18.9612 20.4231 15.6734 22.1339 12.0045 21.9748L12.004 21.9748C6.79694 21.7458 2.43907 17.5811 2.07846 12.4289C1.74905 7.86208 4.4596 3.88545 8.398 2.22456C9.03081 1.95654 9.87253 1.81093 10.4528 2.35651ZM9.36482 3.49126C9.27737 3.50302 9.15039 3.5348 8.9822 3.60611L8.98087 3.60668C5.59555 5.03433 3.29409 8.43675 3.57462 12.3217L3.57475 12.3234C3.88037 16.6955 7.6043 20.2796 12.0695 20.4762C15.2245 20.613 18.0394 19.1433 19.7264 16.8344L19.7287 16.8312C19.8304 16.6936 19.8903 16.5838 19.9243 16.5035C19.8389 16.4992 19.7164 16.5049 19.5511 16.5351L19.5487 16.5355C18.876 16.656 18.1834 16.7061 17.4623 16.6761C12.5496 16.4752 8.52446 12.374 8.50354 7.49753C8.49365 6.1869 8.7662 4.94596 9.25974 3.81768C9.32174 3.67519 9.35163 3.56714 9.36482 3.49126ZM9.4874 3.48881C9.48739 3.48883 9.48691 3.48872 9.48602 3.48846L9.4874 3.48881Z"
+                fill="#D8D8D8"
+              />
+            </svg>
           </button>
         </div>
       </div>
     </header>
-    <main class="w-[70rem] mx-auto mt-[5.75rem]">
+    <main class="w-[20.5rem] mt-6 mx-auto lg:w-[70rem] lg:mt-[5.75rem]">
       <div
-        class="w-full h-[42.875rem] py-10 px-8 flex justify-between border border-solid border-neutral-9 rounded-[24px] shadow-[0px_4px_63px_0px_#00000008]"
+        class="w-full lg:h-[42.875rem] py-10 px-8 flex flex-col lg:flex-row justify-between lg:border lg:border-solid lg:border-neutral-9 lg:rounded-[24px] lg:shadow-[0px_4px_63px_0px_#00000008]"
       >
-        <div class="w-[29.375rem] flex flex-col justify-between relative -z-10">
+        <div
+          class="lg:w-[29.375rem] flex flex-col justify-between lg:relative lg:-z-10"
+        >
           <div class="flex flex-col gap-8">
             <div class="flex flex-col gap-6">
-              <h3 class="font-bold text-40 text-[#070D31]">تماس با‌ من</h3>
-              <p class="font-regular text-20 text-[#6F7076]">
+              <h3
+                class="font-bold text-24 lg:text-40 text-[#141414] lg:text-[#070D31] text-center lg:text-right"
+              >
+                تماس با‌ من
+              </h3>
+              <p
+                class="font-regular text-14 lg:text-20 text-[#141414] lg:text-[#6F7076] text-center lg:text-right"
+              >
                 چیزی هست که بخوای ازم بپرسی؟ خوشحال میشم بتونم بهت کمکی کنم.
               </p>
             </div>
-            <div class="flex flex-col gap-4">
+            <div class="hidden lg:flex flex-col gap-4">
               <div class="flex gap-2 p-4">
                 <div>
                   <svg
@@ -152,7 +184,9 @@
                     />
                   </svg>
                 </div>
-                <div class="font-semibold text-18 text-[#070D31]">1234567 0912</div>
+                <div class="font-semibold text-18 text-[#070D31]">
+                  1234567 0912
+                </div>
               </div>
               <div class="flex gap-2 p-4">
                 <div>
@@ -181,11 +215,13 @@
                     />
                   </svg>
                 </div>
-                <div class="font-semibold text-18 text-[#070D31]">pakdel.marzieh1380@gmail.com</div>
+                <div class="font-semibold text-18 text-[#070D31]">
+                  pakdel.marzieh1380@gmail.com
+                </div>
               </div>
             </div>
           </div>
-          <div class="flex gap-8 absolute bottom-0">
+          <div class="hidden lg:flex gap-8 absolute bottom-0">
             <a href="https://github.com/marzieh-pakdel" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -236,13 +272,15 @@
             </a>
           </div>
         </div>
-        <div class="border border-[#E0E0E0]"></div>
-        <form class="w-[29.375rem] flex flex-col justify-between">
-          <div class="flex justify-between items-center">
+        <div class="hidden lg:block border border-[#E0E0E0]"></div>
+        <form
+          class="w-full lg:w-[29.375rem] mt-6 lg:mt-0 flex flex-col gap-6 p-4 lg:p-0 justify-between border border-neutral-9 rounded-[16px] lg:rounded-none shadow-[0px_4px_63px_0px_#00000008] lg:border-none lg:shadow-none"
+        >
+          <div class="w-full flex justify-between items-center">
             <div class="flex flex-col gap-1">
               <label
                 for="first-name"
-                class="font-semibold text-16 text-[#070D31]"
+                class="font-semibold text-12 lg:text-16 text-[#070D31]"
                 >نام:</label
               >
               <input
@@ -250,13 +288,13 @@
                 placeholder="نام شما"
                 name="first-name"
                 id="first-name"
-                class="border border-[#E6E6E6] rounded-[6px] p-4 font-semibold text-16 placeholder:text-[#BBBBBB]"
+                class="border border-[#E6E6E6] rounded-[6px] py-[0.688rem] px-2 lg:p-4 font-semibold text-12 lg:text-16 placeholder:text-[#BBBBBB]"
               />
             </div>
             <div class="flex flex-col gap-1">
               <label
                 for="last-name"
-                class="font-semibold text-16 text-[#070D31]"
+                class="font-semibold text-12 lg:text-16 text-[#070D31]"
                 >نام خانوادگی:</label
               >
               <input
@@ -264,12 +302,14 @@
                 placeholder="نام خانوادگی شما"
                 name="last-name"
                 id="last-name"
-                class="border border-[#E6E6E6] rounded-[6px] p-4 font-semibold text-16 placeholder:text-[#BBBBBB]"
+                class="border border-[#E6E6E6] rounded-[6px] py-[0.688rem] px-2 lg:p-4 font-semibold text-12 lg:text-16 placeholder:text-[#BBBBBB]"
               />
             </div>
           </div>
           <div class="flex flex-col gap-1">
-            <label for="email" class="font-semibold text-16 text-[#070D31]"
+            <label
+              for="email"
+              class="font-semibold text-12 lg:text-16 text-[#070D31]"
               >ایمیل:
             </label>
             <input
@@ -277,13 +317,13 @@
               placeholder="ایمیل"
               name="email"
               id="email"
-              class="border border-[#E6E6E6] rounded-[6px] p-4 font-semibold text-16 placeholder:text-[#BBBBBB]"
+              class="border border-[#E6E6E6] rounded-[6px] py-[0.688rem] px-2 lg:p-4 font-semibold text-12 lg:text-16 placeholder:text-[#BBBBBB]"
             />
           </div>
           <div class="flex flex-col gap-1">
             <label
               for="phone-number"
-              class="font-semibold text-16 text-[#070D31]"
+              class="font-semibold text-12 lg:text-16 text-[#070D31]"
               >شماره تماس:</label
             >
             <input
@@ -291,28 +331,172 @@
               placeholder="شماره تماس شما"
               name="phone-number"
               id="phone-number"
-              class="border border-[#E6E6E6] rounded-[6px] p-4 font-semibold text-16 placeholder:text-[#BBBBBB]"
+              class="border border-[#E6E6E6] rounded-[6px] py-[0.688rem] px-2 lg:p-4 font-semibold text-12 lg:text-16 placeholder:text-[#BBBBBB]"
             />
           </div>
           <div class="flex flex-col gap-1">
-            <label for="message" class="font-semibold text-16 text-[#070D31]"
+            <label
+              for="message"
+              class="font-semibold text-12 lg:text-16 text-[#070D31]"
               >متن:</label
             >
             <textarea
               placeholder="متن پیام شما"
               name="message"
               id="message"
-              class="resize-none h-[8.5rem] border border-[#E6E6E6] rounded-[6px] p-4 font-semibold text-16 placeholder:text-[#BBBBBB]"
+              class="resize-none h-32 lg:h-[8.5rem] border border-[#E6E6E6] rounded-[6px] py-[0.688rem] px-2 lg:p-4 font-semibold text-12 lg:text-16 placeholder:text-[#BBBBBB]"
             ></textarea>
           </div>
           <div class="flex h-[3.5rem]">
-            <input type="submit" value="ارسال پیام" class="bg-primary text-on-primary-light rounded-[6px] grow font-bold text-18 py-2" />
+            <input
+              type="submit"
+              value="ارسال پیام"
+              class="bg-primary text-on-primary-light rounded-[8px] lg:rounded-[6px] grow font-semibold text-12 lg:font-bold lg:text-18 py-2"
+            />
           </div>
         </form>
+        <div class="w-full flex lg:hidden flex-col mt-4 gap-4">
+          <div class="flex h-14 gap-4">
+            <div
+              class="flex gap-2 py-3 px-2 shadow-[0px_4px_63px_0px_#00000008] border border-neutral-9 rounded-[16px]"
+            >
+              <div
+                class="bg-[#F5FBFF] rounded-full w-8 h-8 p-2 flex justify-center items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                    stroke="#292D32"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9"
+                    stroke="#292D32"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold text-10 text-[#242424]">ایمیل</div>
+                <div class="font-regular text-10 text-[#242424] flex flex-wrap">
+                  pakdel.marzieh1380@gmail.com
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex gap-2 py-3 px-2 shadow-[0px_4px_63px_0px_#00000008] border border-neutral-9 rounded-[16px]"
+            >
+              <div
+                class="bg-[#F5FBFF] rounded-full w-8 h-8 flex justify-center items-center p-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M21.97 18.33C21.97 18.69 21.89 19.06 21.72 19.42C21.55 19.78 21.33 20.12 21.04 20.44C20.55 20.98 20.01 21.37 19.4 21.62C18.8 21.87 18.15 22 17.45 22C16.43 22 15.34 21.76 14.19 21.27C13.04 20.78 11.89 20.12 10.75 19.29C9.6 18.45 8.51 17.52 7.47 16.49C6.44 15.45 5.51 14.36 4.68 13.22C3.86 12.08 3.2 10.94 2.72 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C11.27 13.75 11.79 14.24 12.32 14.69C12.84 15.13 13.27 15.43 13.61 15.61C13.66 15.63 13.72 15.66 13.79 15.69C13.87 15.72 13.95 15.73 14.04 15.73C14.21 15.73 14.34 15.67 14.45 15.56L15.21 14.81C15.46 14.56 15.7 14.37 15.93 14.25C16.16 14.11 16.39 14.04 16.64 14.04C16.83 14.04 17.03 14.08 17.25 14.17C17.47 14.26 17.7 14.39 17.95 14.56L21.26 16.91C21.52 17.09 21.7 17.3 21.81 17.55C21.91 17.8 21.97 18.05 21.97 18.33Z"
+                    stroke="#292D32"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-bold text-10 text-[#242424]">تلفن</div>
+                <div class="font-regular text-10 text-[#242424]">
+                  0912 1234567
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex h-14 py-3 px-2 gap-8 mt-4 justify-center items-center shadow-[0px_4px_63px_0px_#00000008] border border-neutral-9 rounded-[16px]"
+        >
+          <a
+            href="https://github.com/marzieh-pakdel"
+            target="_blank"
+            class="bg-[#F5FBFF] rounded-full w-8 h-8 p-2"
+          >
+            <svg
+              class="w-4 h-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16 0C7.16 0 0 7.16 0 16C0 23.08 4.58 29.06 10.94 31.18C11.74 31.32 12.04 30.84 12.04 30.42C12.04 30.04 12.02 28.78 12.02 27.44C8 28.18 6.96 26.46 6.64 25.56C6.46 25.1 5.68 23.68 5 23.3C4.44 23 3.64 22.26 4.98 22.24C6.24 22.22 7.14 23.4 7.44 23.88C8.88 26.3 11.18 25.62 12.1 25.2C12.24 24.16 12.66 23.46 13.12 23.06C9.56 22.66 5.84 21.28 5.84 15.16C5.84 13.42 6.46 11.98 7.48 10.86C7.32 10.46 6.76 8.82 7.64 6.62C7.64 6.62 8.98 6.2 12.04 8.26C13.32 7.9 14.68 7.72 16.04 7.72C17.4 7.72 18.76 7.9 20.04 8.26C23.1 6.18 24.44 6.62 24.44 6.62C25.32 8.82 24.76 10.46 24.6 10.86C25.62 11.98 26.24 13.4 26.24 15.16C26.24 21.3 22.5 22.66 18.94 23.06C19.52 23.56 20.02 24.52 20.02 26.02C20.02 28.16 20 29.88 20 30.42C20 30.84 20.3 31.34 21.1 31.18C27.42 29.06 32 23.06 32 16C32 7.16 24.84 0 16 0Z"
+                fill="#1F2328"
+              />
+            </svg>
+          </a>
+          <a
+            href=""
+            target="_blank"
+            class="bg-[#F5FBFF] rounded-full w-8 h-8 p-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16ZM22.1 11.5C22.8 11.4 23.4 11.3 24 11C23.6 11.7 23 12.3 22.3 12.7C22.5 17.4 19.1 22.5 13 22.5C11.2 22.5 9.5 21.9 8 21C9.7 21.2 11.5 20.7 12.7 19.8C11.2 19.8 10 18.8 9.6 17.5C10.1 17.6 10.6 17.5 11.1 17.4C9.6 17 8.5 15.6 8.5 14.1C9 14.3 9.5 14.5 10 14.5C8.6 13.5 8.1 11.6 9 10.1C10.7 12.1 13.1 13.4 15.8 13.5C15.3 11.5 16.9 9.5 19 9.5C19.9 9.5 20.8 9.9 21.4 10.5C22.2 10.3 22.9 10.1 23.5 9.7C23.3 10.5 22.8 11.1 22.1 11.5Z"
+                fill="black"
+              />
+            </svg>
+          </a>
+          <a
+            href="www.linkedin.com/in/marziye-pakdel"
+            target="_blank"
+            class="bg-[#F5FBFF] rounded-full w-8 h-8 p-2"
+          >
+            <svg
+              class="w-4 h-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16ZM8.2 13.3V24H11.6V13.3H8.2ZM8 9.9C8 11 8.8 11.8 9.9 11.8C11 11.8 11.8 11 11.8 9.9C11.8 8.8 11 8 9.9 8C8.9 8 8 8.8 8 9.9ZM20.6 24H23.8V17.4C23.8 14.1 21.8 13 19.9 13C18.2 13 17 14.1 16.7 14.8V13.3H13.5V24H16.9V18.3C16.9 16.8 17.9 16 18.9 16C19.9 16 20.6 16.5 20.6 18.2V24Z"
+                fill="black"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </main>
-    <footer class="flex flex-col gap-[3rem] w-[70rem] mx-auto mt-[7.5rem]">
-      <div class="flex justify-center items-center gap-4">
+    <footer
+      class="w-[20.5rem] flex flex-col lg:w-[70rem] mx-auto mt-12 lg:gap-6"
+    >
+      <div class="hidden w-full lg:flex justify-center items-center gap-4">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -321,10 +505,16 @@
             viewBox="0 0 224 1"
             fill="none"
           >
-            <path d="M0.5 0.5L223.5 0.5" stroke="#AFAFAF" />
+            <path
+              class="dark:stroke-[#E9E9E9]"
+              d="M0.5 0.5L223.5 0.5"
+              stroke="#AFAFAF"
+            />
           </svg>
         </div>
-        <div class="font-semibold text-20">کوئرا لیست</div>
+        <div class="font-semibold text-16 text-[#141414] dark:text-neutral-11">
+          کوئرا لیست
+        </div>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -333,17 +523,51 @@
             viewBox="0 0 224 1"
             fill="none"
           >
-            <path d="M0.5 0.5L223.5 0.5" stroke="#AFAFAF" />
+            <path
+              class="dark:stroke-[#E9E9E9]"
+              d="M0.5 0.5L223.5 0.5"
+              stroke="#AFAFAF"
+            />
           </svg>
         </div>
       </div>
-      <div class="flex justify-between items-center">
-        <div class="flex flex-col gap-6 w-[20.563rem]">
-          <div
-            class="flex items-center justify-start gap-4 text-dark-text font-regular text-14"
+      <div class="flex w-full lg:hidden justify-center items-center gap-4">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="113"
+            height="1"
+            viewBox="0 0 113 1"
+            fill="none"
           >
-            <div>
+            <path d="M0 0.5L113 0.5" stroke="#AFAFAF" />
+          </svg>
+        </div>
+        <div class="font-semibold text-16 text-[#141414] dark:text-neutral-11">
+          کوئرالیست
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="113"
+            height="1"
+            viewBox="0 0 113 1"
+            fill="none"
+          >
+            <path d="M0 0.5L113 0.5" stroke="#AFAFAF" />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="flex flex-col lg:flex-row justify-between items-center mt-8 lg:mt-0"
+      >
+        <div class="hidden lg:flex flex-col gap-6 w-[20.563rem]">
+          <div
+            class="flex items-center justify-start gap-4 text-dark-text font-regular text-14 dark:text-neutral-11"
+          >
+            <div class="">
               <svg
+                class="dark:stroke-neutral-11"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -352,6 +576,7 @@
               >
                 <g clip-path="url(#clip0_46_691)">
                   <path
+                    class="dark:fill-neutral-11"
                     d="M3.42857 2.57143C3.42857 1.88944 3.69949 1.23539 4.18173 0.753154C4.66396 0.270918 5.31801 0 6 0H18C18.682 0 19.336 0.270918 19.8183 0.753154C20.3005 1.23539 20.5714 1.88944 20.5714 2.57143V6.85714H18.8571V2.57143C18.8571 2.3441 18.7668 2.12608 18.6061 1.96534C18.4453 1.80459 18.2273 1.71429 18 1.71429H6C5.77267 1.71429 5.55465 1.80459 5.39391 1.96534C5.23316 2.12608 5.14286 2.3441 5.14286 2.57143V8.57143H14.5714C14.0139 9.31269 13.713 10.2154 13.7143 11.1429V21.4286C13.7143 22.3937 14.0331 23.2834 14.5714 24H2.57143C1.88944 24 1.23539 23.7291 0.753154 23.2468C0.270918 22.7646 0 22.1106 0 21.4286V12C0 11.0907 0.361223 10.2186 1.00421 9.57563C1.64719 8.93265 2.51926 8.57143 3.42857 8.57143V2.57143ZM5.57143 13.0714C5.57143 12.7873 5.45855 12.5147 5.25761 12.3138C5.05668 12.1129 4.78416 12 4.5 12C4.21584 12 3.94332 12.1129 3.74239 12.3138C3.54145 12.5147 3.42857 12.7873 3.42857 13.0714C3.42857 13.3556 3.54145 13.6281 3.74239 13.829C3.94332 14.03 4.21584 14.1429 4.5 14.1429C4.78416 14.1429 5.05668 14.03 5.25761 13.829C5.45855 13.6281 5.57143 13.3556 5.57143 13.0714ZM5.57143 16.9286C5.57143 16.6444 5.45855 16.3719 5.25761 16.171C5.05668 15.97 4.78416 15.8571 4.5 15.8571C4.21584 15.8571 3.94332 15.97 3.74239 16.171C3.54145 16.3719 3.42857 16.6444 3.42857 16.9286C3.42857 17.2127 3.54145 17.4853 3.74239 17.6862C3.94332 17.8871 4.21584 18 4.5 18C4.78416 18 5.05668 17.8871 5.25761 17.6862C5.45855 17.4853 5.57143 17.2127 5.57143 16.9286ZM8.35714 16.0714C8.07298 16.0714 7.80046 16.1843 7.59953 16.3852C7.3986 16.5862 7.28571 16.8587 7.28571 17.1429C7.28571 17.427 7.3986 17.6995 7.59953 17.9005C7.80046 18.1014 8.07298 18.2143 8.35714 18.2143C8.6413 18.2143 8.91383 18.1014 9.11476 17.9005C9.31569 17.6995 9.42857 17.427 9.42857 17.1429C9.42857 16.8587 9.31569 16.5862 9.11476 16.3852C8.91383 16.1843 8.6413 16.0714 8.35714 16.0714ZM9.42857 13.0714C9.42857 12.7873 9.31569 12.5147 9.11476 12.3138C8.91383 12.1129 8.6413 12 8.35714 12C8.07298 12 7.80046 12.1129 7.59953 12.3138C7.3986 12.5147 7.28571 12.7873 7.28571 13.0714C7.28571 13.3556 7.3986 13.6281 7.59953 13.829C7.80046 14.03 8.07298 14.1429 8.35714 14.1429C8.6413 14.1429 8.91383 14.03 9.11476 13.829C9.31569 13.6281 9.42857 13.3556 9.42857 13.0714ZM18 8.57143C17.318 8.57143 16.664 8.84235 16.1817 9.32458C15.6995 9.80682 15.4286 10.4609 15.4286 11.1429V21.4286C15.4286 22.1106 15.6995 22.7646 16.1817 23.2468C16.664 23.7291 17.318 24 18 24H21.4286C22.1106 24 22.7646 23.7291 23.2468 23.2468C23.7291 22.7646 24 22.1106 24 21.4286V11.1429C24 10.4609 23.7291 9.80682 23.2468 9.32458C22.7646 8.84235 22.1106 8.57143 21.4286 8.57143H18Z"
                     fill="#242424"
                   />
@@ -366,10 +591,11 @@
             <div>فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</div>
           </div>
           <div
-            class="flex items-center justify-start gap-4 text-dark-text font-regular text-14"
+            class="flex items-center justify-start gap-4 text-dark-text font-regular text-14 dark:text-neutral-11"
           >
             <div>
               <svg
+                class="dark:stroke-neutral-11"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -377,10 +603,12 @@
                 fill="none"
               >
                 <path
+                  class="dark:fill-neutral-11"
                   d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z"
                   fill="#242424"
                 />
                 <path
+                  class="dark:fill-neutral-11"
                   d="M21.9696 18.33C21.9696 18.61 21.9196 18.9 21.8196 19.18C21.7896 19.26 21.7596 19.34 21.7196 19.42C21.5496 19.78 21.3296 20.12 21.0396 20.44C20.5496 20.98 20.0096 21.37 19.3996 21.62C19.3896 21.62 19.3796 21.63 19.3696 21.63C18.7796 21.87 18.1396 22 17.4496 22C16.4296 22 15.3396 21.76 14.1896 21.27C13.0396 20.78 11.8896 20.12 10.7496 19.29C10.3596 19 9.96961 18.71 9.59961 18.4L12.8696 15.13C13.1496 15.34 13.3996 15.5 13.6096 15.61C13.6596 15.63 13.7196 15.66 13.7896 15.69C13.8696 15.72 13.9496 15.73 14.0396 15.73C14.2096 15.73 14.3396 15.67 14.4496 15.56L15.2096 14.81C15.4596 14.56 15.6996 14.37 15.9296 14.25C16.1596 14.11 16.3896 14.04 16.6396 14.04C16.8296 14.04 17.0296 14.08 17.2496 14.17C17.4696 14.26 17.6996 14.39 17.9496 14.56L21.2596 16.91C21.5196 17.09 21.6996 17.3 21.8096 17.55C21.9096 17.8 21.9696 18.05 21.9696 18.33Z"
                   fill="#242424"
                 />
@@ -389,10 +617,11 @@
             <div>تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</div>
           </div>
           <div
-            class="flex items-center justify-start gap-4 text-dark-text font-regular text-14"
+            class="flex items-center justify-start gap-4 text-dark-text font-regular text-14 dark:text-neutral-11"
           >
             <div>
               <svg
+                class="dark:stroke-neutral-11"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -400,6 +629,7 @@
                 fill="none"
               >
                 <path
+                  class="dark:fill-neutral-11"
                   d="M20.6201 8.45C19.5701 3.83 15.5401 1.75 12.0001 1.75C12.0001 1.75 12.0001 1.75 11.9901 1.75C8.4601 1.75 4.4201 3.82 3.3701 8.44C2.2001 13.6 5.3601 17.97 8.2201 20.72C9.2801 21.74 10.6401 22.25 12.0001 22.25C13.3601 22.25 14.7201 21.74 15.7701 20.72C18.6301 17.97 21.7901 13.61 20.6201 8.45ZM12.0001 13.46C10.2601 13.46 8.8501 12.05 8.8501 10.31C8.8501 8.57 10.2601 7.16 12.0001 7.16C13.7401 7.16 15.1501 8.57 15.1501 10.31C15.1501 12.05 13.7401 13.46 12.0001 13.46Z"
                   fill="#242424"
                 />
@@ -412,9 +642,15 @@
           </div>
         </div>
         <div class="flex flex-col gap-8">
-          <div class="flex flex-col gap-3">
-            <p class="font-bold text-16 text-dark-text">با ما در ارتباط باش</p>
-            <p class="font-regular text-16 text-dark-text w-[20.938rem]">
+          <div class="flex flex-col gap-2 lg:gap-3">
+            <p
+              class="font-bold text-14 lg:text-16 text-dark-text dark:text-neutral-11"
+            >
+              با ما در ارتباط باش
+            </p>
+            <p
+              class="font-regular text-12 lg:text-16 text-dark-text w-[20.938rem] dark:text-neutral-11"
+            >
               اگه میخوای اولین نفری باشی که از فیچرهای جدید و تخفیفات با خبر
               بشی.
             </p>
@@ -425,18 +661,119 @@
             <input
               type="email"
               placeholder="ایمیل"
-              class="flex grow h-12 placeholder-placeholder focus:outline-none"
+              class="flex grow font-regular text-14 h-12 placeholder-placeholder focus:outline-none dark:bg-main-dark"
             />
             <button
-              class="text-14 text-on-primary-light bg-primary leading-[1.026rem] py-2.5 px-4 h-9 w-[4.063rem] rounded-[8px] transition-colors duration-200 hover:bg-primary-hover-light"
+              class="text-14 text-on-primary-light bg-primary leading-[1.026rem] py-2.5 px-4 h-9 w-[4.063rem] rounded-[8px] transition-colors duration-200 hover:bg-primary-hover-light dark:bg-primary-dark dark:hover:bg-primary-hover-dark"
             >
               ارسال
             </button>
           </div>
         </div>
+        <div class="lg:hidden w-full h-[10.75rem] mt-8 grid grid-cols-2 gap-4">
+          <div
+            class="flex items-center justify-center gap-2 p-4 order-last text-dark-text font-regular text-10 border border-[neutral-9rem] rounded-[16px] dark:bg-[#081021] dark:border-none dark:text-[#F5FBFF]"
+          >
+            <div
+              class="bg-[#F5FBFF] rounded-full w-10 h-10 flex justify-center items-center dark:bg-[#1B293C]"
+            >
+              <svg
+                class="dark:stroke-neutral-11"
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_46_3643)">
+                  <path
+                    class="dark:fill-neutral-11"
+                    d="M2.78571 1.71429C2.78571 1.25963 2.96633 0.823594 3.28782 0.502103C3.60931 0.180612 4.04534 0 4.5 0H12.5C12.9547 0 13.3907 0.180612 13.7122 0.502103C14.0337 0.823594 14.2143 1.25963 14.2143 1.71429V4.57143H13.0714V1.71429C13.0714 1.56273 13.0112 1.41739 12.9041 1.31022C12.7969 1.20306 12.6516 1.14286 12.5 1.14286H4.5C4.34845 1.14286 4.2031 1.20306 4.09594 1.31022C3.98878 1.41739 3.92857 1.56273 3.92857 1.71429V5.71429H10.2143C9.84262 6.20846 9.64203 6.81024 9.64286 7.42857V14.2857C9.64286 14.9291 9.85543 15.5223 10.2143 16H2.21429C1.75963 16 1.32359 15.8194 1.0021 15.4979C0.680612 15.1764 0.5 14.7404 0.5 14.2857V8C0.5 7.39379 0.740816 6.81241 1.16947 6.38376C1.59812 5.9551 2.17951 5.71429 2.78571 5.71429V1.71429ZM4.21429 8.71429C4.21429 8.52485 4.13903 8.34316 4.00508 8.20921C3.87112 8.07525 3.68944 8 3.5 8C3.31056 8 3.12888 8.07525 2.99492 8.20921C2.86097 8.34316 2.78571 8.52485 2.78571 8.71429C2.78571 8.90373 2.86097 9.08541 2.99492 9.21936C3.12888 9.35332 3.31056 9.42857 3.5 9.42857C3.68944 9.42857 3.87112 9.35332 4.00508 9.21936C4.13903 9.08541 4.21429 8.90373 4.21429 8.71429ZM4.21429 11.2857C4.21429 11.0963 4.13903 10.9146 4.00508 10.7806C3.87112 10.6467 3.68944 10.5714 3.5 10.5714C3.31056 10.5714 3.12888 10.6467 2.99492 10.7806C2.86097 10.9146 2.78571 11.0963 2.78571 11.2857C2.78571 11.4752 2.86097 11.6568 2.99492 11.7908C3.12888 11.9247 3.31056 12 3.5 12C3.68944 12 3.87112 11.9247 4.00508 11.7908C4.13903 11.6568 4.21429 11.4752 4.21429 11.2857ZM6.07143 10.7143C5.88199 10.7143 5.70031 10.7895 5.56635 10.9235C5.4324 11.0574 5.35714 11.2391 5.35714 11.4286C5.35714 11.618 5.4324 11.7997 5.56635 11.9336C5.70031 12.0676 5.88199 12.1429 6.07143 12.1429C6.26087 12.1429 6.44255 12.0676 6.57651 11.9336C6.71046 11.7997 6.78571 11.618 6.78571 11.4286C6.78571 11.2391 6.71046 11.0574 6.57651 10.9235C6.44255 10.7895 6.26087 10.7143 6.07143 10.7143ZM6.78571 8.71429C6.78571 8.52485 6.71046 8.34316 6.57651 8.20921C6.44255 8.07525 6.26087 8 6.07143 8C5.88199 8 5.70031 8.07525 5.56635 8.20921C5.4324 8.34316 5.35714 8.52485 5.35714 8.71429C5.35714 8.90373 5.4324 9.08541 5.56635 9.21936C5.70031 9.35332 5.88199 9.42857 6.07143 9.42857C6.26087 9.42857 6.44255 9.35332 6.57651 9.21936C6.71046 9.08541 6.78571 8.90373 6.78571 8.71429ZM12.5 5.71429C12.0453 5.71429 11.6093 5.8949 11.2878 6.21639C10.9663 6.53788 10.7857 6.97392 10.7857 7.42857V14.2857C10.7857 14.7404 10.9663 15.1764 11.2878 15.4979C11.6093 15.8194 12.0453 16 12.5 16H14.7857C15.2404 16 15.6764 15.8194 15.9979 15.4979C16.3194 15.1764 16.5 14.7404 16.5 14.2857V7.42857C16.5 6.97392 16.3194 6.53788 15.9979 6.21639C15.6764 5.8949 15.2404 5.71429 14.7857 5.71429H12.5Z"
+                    fill="#2C7EF8"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_46_3643">
+                    <rect
+                      width="16"
+                      height="16"
+                      fill="white"
+                      transform="translate(0.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div>
+              فکس:
+              <br />
+              ۴۴۴۴۵۵۶۶ - ۰۲۱
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center gap-2 p-4 text-dark-text font-regular text-10 border border-[neutral-9rem] rounded-[16px] dark:bg-[#081021] dark:border-none dark:text-[#F5FBFF]"
+          >
+            <div
+              class="bg-[#F5FBFF] rounded-full w-10 h-10 flex justify-center items-center dark:bg-[#1B293C]"
+            >
+              <svg
+                class="dark:stroke-neutral-11"
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+              >
+                <path
+                  class="dark:fill-neutral-11"
+                  d="M7.86683 9.96671L6.6335 11.2C6.3735 11.46 5.96016 11.46 5.6935 11.2067C5.62016 11.1334 5.54683 11.0667 5.4735 10.9934C4.78683 10.3 4.16683 9.57337 3.6135 8.81337C3.06683 8.05337 2.62683 7.29337 2.30683 6.54004C1.9935 5.78004 1.8335 5.05337 1.8335 4.36004C1.8335 3.90671 1.9135 3.47337 2.0735 3.07337C2.2335 2.66671 2.48683 2.29337 2.84016 1.96004C3.26683 1.54004 3.7335 1.33337 4.22683 1.33337C4.4135 1.33337 4.60016 1.37337 4.76683 1.45337C4.94016 1.53337 5.0935 1.65337 5.2135 1.82671L6.76016 4.00671C6.88016 4.17337 6.96683 4.32671 7.02683 4.47337C7.08683 4.61337 7.12016 4.75337 7.12016 4.88004C7.12016 5.04004 7.0735 5.20004 6.98016 5.35337C6.8935 5.50671 6.76683 5.66671 6.60683 5.82671L6.10016 6.35337C6.02683 6.42671 5.9935 6.51337 5.9935 6.62004C5.9935 6.67337 6.00016 6.72004 6.0135 6.77337C6.0335 6.82671 6.0535 6.86671 6.06683 6.90671C6.18683 7.12671 6.3935 7.41337 6.68683 7.76004C6.98683 8.10671 7.30683 8.46004 7.6535 8.81337C7.72016 8.88004 7.7935 8.94671 7.86016 9.01337C8.12683 9.27337 8.1335 9.70004 7.86683 9.96671Z"
+                  fill="#2C7EF8"
+                />
+                <path
+                  class="dark:fill-neutral-11"
+                  d="M15.1466 12.22C15.1466 12.4067 15.1132 12.6 15.0466 12.7867C15.0266 12.84 15.0066 12.8933 14.9799 12.9467C14.8666 13.1867 14.7199 13.4133 14.5266 13.6267C14.1999 13.9867 13.8399 14.2467 13.4332 14.4133C13.4266 14.4133 13.4199 14.42 13.4132 14.42C13.0199 14.58 12.5932 14.6667 12.1332 14.6667C11.4532 14.6667 10.7266 14.5067 9.9599 14.18C9.19324 13.8533 8.42657 13.4133 7.66657 12.86C7.40657 12.6667 7.14657 12.4733 6.8999 12.2667L9.0799 10.0867C9.26657 10.2267 9.43324 10.3333 9.57324 10.4067C9.60657 10.42 9.64657 10.44 9.69324 10.46C9.74657 10.48 9.7999 10.4867 9.8599 10.4867C9.97324 10.4867 10.0599 10.4467 10.1332 10.3733L10.6399 9.87332C10.8066 9.70665 10.9666 9.57999 11.1199 9.49999C11.2732 9.40665 11.4266 9.35999 11.5932 9.35999C11.7199 9.35999 11.8532 9.38665 11.9999 9.44665C12.1466 9.50665 12.2999 9.59332 12.4666 9.70665L14.6732 11.2733C14.8466 11.3933 14.9666 11.5333 15.0399 11.7C15.1066 11.8667 15.1466 12.0333 15.1466 12.22Z"
+                  fill="#2C7EF8"
+                />
+              </svg>
+            </div>
+            <div>
+              تلفن پشتیبانی:
+              <br />
+              ۴۴۴۴۵۵۶۶ - ۰۲۱
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center justify-center gap-4 p-4 order-first row-span-2 text-dark-text font-regular text-10 border border-[neutral-9rem] rounded-[16px] dark:bg-[#081021] dark:border-none dark:text-[#F5FBFF]"
+          >
+            <div
+              class="bg-[#F5FBFF] rounded-full w-10 h-10 flex justify-center items-center dark:bg-[#1B293C]"
+            >
+              <svg
+                class="dark:stroke-neutral-11"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  class="dark:fill-neutral-11"
+                  d="M13.7467 5.63329C13.0467 2.55329 10.3601 1.16663 8.00006 1.16663C8.00006 1.16663 8.00006 1.16663 7.9934 1.16663C5.64006 1.16663 2.94673 2.54663 2.24673 5.62663C1.46673 9.06663 3.5734 11.98 5.48006 13.8133C6.18673 14.4933 7.0934 14.8333 8.00006 14.8333C8.90673 14.8333 9.8134 14.4933 10.5134 13.8133C12.4201 11.98 14.5267 9.07329 13.7467 5.63329ZM8.00006 8.97329C6.84006 8.97329 5.90006 8.03329 5.90006 6.87329C5.90006 5.71329 6.84006 4.77329 8.00006 4.77329C9.16006 4.77329 10.1001 5.71329 10.1001 6.87329C10.1001 8.03329 9.16006 8.97329 8.00006 8.97329Z"
+                  fill="#2C7EF8"
+                />
+              </svg>
+            </div>
+            <div class="text-center">
+              آدرس دفتر مرکزی: پونک - خیابان اشرفی اصفهانی - خیابان صبحدل- بن
+              بست شب بو
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <p class="text-center font-regular text-14 text-dark-gray h-[3.375rem]">
+      <div class="mt-10 lg:mt-0">
+        <p
+          class="text-center font-regular text-12 lg:text-14 text-dark-gray h-[3.375rem] dark:text-[#DFDFDF]"
+        >
           تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.
         </p>
       </div>
