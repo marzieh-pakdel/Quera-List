@@ -1739,6 +1739,10 @@ video {
     flex-direction: row;
   }
 
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
   .lg\:gap-3 {
     gap: 0.75rem;
   }
