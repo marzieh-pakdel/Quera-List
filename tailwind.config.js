@@ -54,7 +54,7 @@ module.exports = {
       },
 
       screens: {
-        lg: "600px",
+        lg: "361px",
       },
 
       fontFamily: {
