@@ -1622,7 +1622,7 @@ video {
   outline-offset: 2px;
 }
 
-@media (min-width: 361px) {
+@media (min-width: 400px) {
   .lg\:-left-\[8\.25rem\] {
     left: -8.25rem;
   }
@@ -2233,7 +2233,7 @@ video {
   background-color: rgb(7 92 217 / var(--tw-bg-opacity));
 }
 
-@media (min-width: 361px) {
+@media (min-width: 400px) {
   .lg\:dark\:top-\[9\.75rem\]:where(.dark, .dark *) {
     top: 9.75rem;
   }
