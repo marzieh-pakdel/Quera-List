@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl" class="dark">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,6 +79,7 @@
             ورود به اپلیکیشن
           </button>
           <button
+            id="change-mode"
             class="w-10 h-10 border border-solid border-[#E3E3E3] rounded-[6px] flex justify-center items-center"
           >
             <svg
@@ -150,9 +151,10 @@
       </div>
 
       <div
-        class="hidden w-60 lg:flex items-start justify-center flex-col gap-4 p-6 bg-neutral-11 absolute top-[4.5rem] left-[6.5rem] shadow-[0px_12px_24px_-6px_rgba(20, 20, 25, 0.06)] border border-[#EBEDEF] rounded-[8px] lg:dark:bg-card-bg-dark dark:border-[#293242]"
+        id="mode-box"
+        class="hidden w-60 lg:hidden items-start justify-center flex-col gap-4 p-6 bg-neutral-11 absolute top-[4.5rem] left-[6.5rem] shadow-[0px_12px_24px_-6px_rgba(20, 20, 25, 0.06)] border border-[#EBEDEF] rounded-[8px] lg:dark:bg-card-bg-dark dark:border-[#293242]"
       >
-        <div class="w-full flex gap-2 items-center justify-start">
+        <div id="light-mode" class="w-full flex gap-2 items-center justify-start cursor-pointer">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +202,7 @@
           </div>
         </div>
         <div class="w-full border border-background-light dark:border-[#293242]"></div>
-        <div class="w-full flex gap-2 items-center justify-start">
+        <div id="dark-mode" class="w-full flex gap-2 items-center justify-start cursor-pointer">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +243,7 @@
           </div>
         </div>
         <div class="w-full border border-background-light dark:border-[#293242]"></div>
-        <div class="w-full flex gap-2 items-center justify-start">
+        <div id="system-preference" class="w-full flex gap-2 items-center justify-start cursor-pointer">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
