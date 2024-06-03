@@ -154,7 +154,10 @@
         id="mode-box"
         class="hidden w-60 lg:hidden items-start justify-center flex-col gap-4 p-6 bg-neutral-11 absolute top-[4.5rem] left-[6.5rem] shadow-[0px_12px_24px_-6px_rgba(20, 20, 25, 0.06)] border border-[#EBEDEF] rounded-[8px] lg:dark:bg-card-bg-dark dark:border-[#293242]"
       >
-        <div id="light-mode" class="w-full flex gap-2 items-center justify-start cursor-pointer">
+        <div
+          id="light"
+          class="w-full flex gap-2 items-center justify-start cursor-pointer"
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +187,7 @@
           >
             حالت روشن
           </div>
-          <div class="hidden">
+          <div id="light-checkmark" class="check-mark hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -201,8 +204,13 @@
             </svg>
           </div>
         </div>
-        <div class="w-full border border-background-light dark:border-[#293242]"></div>
-        <div id="dark-mode" class="w-full flex gap-2 items-center justify-start cursor-pointer">
+        <div
+          class="w-full border border-background-light dark:border-[#293242]"
+        ></div>
+        <div
+          id="dark"
+          class="w-full flex gap-2 items-center justify-start cursor-pointer"
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +233,7 @@
           >
             حالت تاریک
           </div>
-          <div class="hidden">
+          <div id="dark-checkmark" class="check-mark hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -242,8 +250,13 @@
             </svg>
           </div>
         </div>
-        <div class="w-full border border-background-light dark:border-[#293242]"></div>
-        <div id="system-preference" class="w-full flex gap-2 items-center justify-start cursor-pointer">
+        <div
+          class="w-full border border-background-light dark:border-[#293242]"
+        ></div>
+        <div
+          id="system-preference"
+          class="w-full flex gap-2 items-center justify-start cursor-pointer"
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -309,7 +322,7 @@
           >
             پیروی از دستگاه
           </div>
-          <div>
+          <div id="system-preference-checkmark" class="check-mark">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -809,7 +822,7 @@
               class="carousel flex flex-row lg:flex-col gap-4 lg:gap-6 lg:h-[37.75rem]"
             >
               <div
-                class="item hidden active w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-[21.25rem] bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
+                class="item flex active w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-[21.25rem] bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
               >
                 <div
                   class="flex gap-2.5 lg:gap-[1.063rem] items-center justify-start"
@@ -843,7 +856,7 @@
                 </p>
               </div>
               <div
-                class="item hidden w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-60 bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
+                class="item flex w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-60 bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
               >
                 <div
                   class="flex gap-2.5 lg:gap-[1.063rem] items-center justify-start"
@@ -879,7 +892,7 @@
               class="carousel flex flex-row lg:flex-col gap-4 lg:gap-6 lg:h-[37.75rem]"
             >
               <div
-                class="hidden item w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-60 bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
+                class="flex item w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-60 bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
               >
                 <div
                   class="flex gap-2.5 lg:gap-[1.063rem] items-center justify-start"
@@ -911,7 +924,7 @@
                 </p>
               </div>
               <div
-                class="hidden item w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-[21.25rem] bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
+                class="flex item w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-[21.25rem] bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
               >
                 <div
                   class="flex gap-2.5 lg:gap-[1.063rem] items-center justify-start"
@@ -949,7 +962,7 @@
               class="carousel flex flex-row lg:flex-col gap-4 lg:gap-6 lg:h-[37.75rem]"
             >
               <div
-                class="hidden item w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-[21.25rem] bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
+                class="flex item w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-[21.25rem] bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
               >
                 <div
                   class="flex gap-2.5 lg:gap-[1.063rem] items-center justify-start"
@@ -983,7 +996,7 @@
                 </p>
               </div>
               <div
-                class="hidden item w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-60 bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
+                class="flex item w-[16.125rem] lg:w-[22.313rem] h-[17rem] lg:h-60 bg-on-primary-light lg:flex flex-col items-start self-start justify-center gap-6 rounded-[16px] shadow-[0_0_63px_0_rgba(0,0,0,0.04)] p-6 lg:px-8 lg:py-6 dark:bg-card-bg-dark"
               >
                 <div
                   class="flex gap-2.5 lg:gap-[1.063rem] items-center justify-start"
@@ -1020,7 +1033,8 @@
             class="flex mt-0 items-center justify-between w-20 lg:w-[6.5rem]"
           >
             <button
-              class="prev w-8 h-8 lg:w-10 lg:h-10 p-2.5 border border-solid bordr-border rounded-[6px] flex items-center justify-center dark:bg-card-bg-dark dark:border-[#293242]"
+              id="prev"
+              class="w-8 h-8 lg:w-10 lg:h-10 p-2.5 border border-solid bordr-border rounded-[6px] flex items-center justify-center dark:bg-card-bg-dark dark:border-[#293242]"
             >
               <svg
                 class="dark:stroke-neutral-11"
@@ -1040,7 +1054,8 @@
               </svg>
             </button>
             <button
-              class="next w-8 h-8 lg:w-10 lg:h-10 p-2.5 border border-solid bordr-border rounded-[6px] flex items-center justify-center dark:bg-card-bg-dark dark:border-[#293242]"
+              id="next"
+              class="w-8 h-8 lg:w-10 lg:h-10 p-2.5 border border-solid bordr-border rounded-[6px] flex items-center justify-center dark:bg-card-bg-dark dark:border-[#293242]"
             >
               <svg
                 class="dark:stroke-neutral-11"

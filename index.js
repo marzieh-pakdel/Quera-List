@@ -3,9 +3,10 @@
 const changeModeBtn = document.getElementById("change-mode");
 const modeBox = document.getElementById("mode-box");
 const htmlTag = document.getElementsByTagName("html")[0];
-const lightMode = document.getElementById("light-mode");
-const darkMode = document.getElementById("dark-mode");
+const lightMode = document.getElementById("light");
+const darkMode = document.getElementById("dark");
 const systemPreference = document.getElementById("system-preference");
+const systemPreferenceMode = "system-preference";
 
 changeModeBtn.addEventListener("click", toggleModebox);
 
@@ -14,55 +15,76 @@ function toggleModebox() {
   modeBox.classList.toggle("lg:hidden");
 }
 
-document.addEventListener("click", hideModebox)
+document.addEventListener("click", hideModebox);
 
-function hideModebox() {
-  if (!modeBox.contains(event.target) && !changeModeBtn.contains(event.target)) {
-    modeBox.classList.replace("lg:flex", "lg:hidden")
+function hideModebox(event) {
+  if (
+    !modeBox.contains(event.target) &&
+    !changeModeBtn.contains(event.target)
+  ) {
+    modeBox.classList.replace("lg:flex", "lg:hidden");
   }
 }
 
-
-darkMode.addEventListener("click", darkModeOn)
-lightMode.addEventListener("click", lightModeOn)
-systemPreference.addEventListener("click", systemPreferenceOn)
-
-function darkModeOn () {
-  if (htmlTag.classList.contains("light")) {
-    htmlTag.classList.replace("light", "dark")
-  } else {
-    htmlTag.classList.add("dark")
-  }
+function setTheme(theme) {
+  htmlTag.className = theme;
+  localStorage.setItem("theme", theme);
 }
 
-function lightModeOn () {
-  if (htmlTag.classList.contains("dark")) {
-    htmlTag.classList.replace("dark", "light")
-  } else {
-    htmlTag.classList.add("light")
+function updateModeBox(mode) {
+  let modeCheckMark = document.getElementsByClassName("check-mark");
+  for (let i = 0; i < modeCheckMark.length; i++) {
+    let element = modeCheckMark[i];
+    if (!element.classList.contains("hidden")) {
+      if (element.classList.contains("block")) {
+        element.classList.replace("block", "hidden");
+      } else {
+        element.classList.add("hidden");
+      }
+    }
   }
-} 
 
-function systemPreferenceOn () {
-  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (prefersDarkScheme) {
-    htmlTag.classList.remove("light")
-    htmlTag.classList.add("dark")
-  } else {
-    htmlTag.classList.remove("dark")
-    htmlTag.classList.add("light")
-  }
+  document.getElementById(mode + "-checkmark").classList.remove("hidden");
 }
+
+function getSystemPreferenceTheme() {
+  const prefersDarkScheme = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+
+  return prefersDarkScheme ? "dark" : "light";
+}
+
+darkMode.addEventListener("click", chnageMode);
+lightMode.addEventListener("click", chnageMode);
+systemPreference.addEventListener("click", chnageMode);
+
+function chnageMode(event) {
+  let themeMode = event.target.id || event.target.parentElement.id;
+  let theme =
+    themeMode == systemPreferenceMode ? getSystemPreferenceTheme() : themeMode;
+
+  setTheme(theme);
+  updateModeBox(themeMode);
+}
+
+function loadLastTheme() {
+  const savedTheme = localStorage.getItem("theme") || getSystemPreferenceTheme();
+  htmlTag.classList.add(savedTheme);
+}
+
+loadLastTheme();
 
 //////////////////// Carrousel /////////////////////
 
-// const previousBtn = document.querySelector("prev");
-// const nextBtn = document.querySelector("next")
+// const prevBtn = document.getElementById("prev");
+// const nextBtn = document.getElementById("next")
 
 // let currentIndex = 1;
 
-// function displaySlide() {
-//   const items = document.getElementsByClassName(".item");
+// function displayCard() {
+//   const items = document.getElementsByClassName("item");
+
 //   if (currentIndex > items.length) {
 //     currentIndex = 1;
 //   }
@@ -70,19 +92,20 @@ function systemPreferenceOn () {
 //     currentIndex = items.length;
 //   }
 
-//   for (var i = 0; i < items.length; i++) {
-//     items[i].style.display = 'none';
-//   }
+//   // for (let i = 0; i < items.length; i++) {
+//   //   items[i].className = "hidden"
+//   // }
 
-//   items[currentIndex - 1].style.display = "flex";
+
+//   items[currentIndex - 1].classList.replace("hidden", "flex");
 // }
 
-// displaySlide(currentIndex);
+// displayCard(currentIndex);
 
-// function changeSlide(n) {
+// function changeCard(n) {
 //   currentIndex += n;
-//   displaySlide(currentIndex);
+//   displayCard(currentIndex);
 // }
 
-// previousBtn.addEeventListener('click', changeSlide(-1))
-// nextBtn.addEeventListener('click', changeSlide(1))
+// prevBtn.addEventListener('click', changeCard(-1))
+// nextBtn.addEventListener('click', changeCard(1))
