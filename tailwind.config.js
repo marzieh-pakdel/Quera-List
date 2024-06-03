@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  content: ["./*.{html,js}"],
+  content: ["./src/*/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -49,7 +49,7 @@ module.exports = {
           "linear-gradient(160.99deg, rgba(239, 235, 255, 0) 29.95%, #E0EDFF 78.88% )",
         "circle-2":
           "linear-gradient(162.19deg, rgba(239, 235, 255, 0) 32.45%, #EBEBFB 79.35%)",
-        "top-bg-dark" :
+        "top-bg-dark":
           "linear-gradient(180deg, rgba(2, 103, 255, 0.25) -25.32%, rgba(26, 32, 44, 0) 88.96%)",
       },
 
