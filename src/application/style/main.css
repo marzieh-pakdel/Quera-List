@@ -348,36 +348,50 @@ body {
   padding: 0.625rem;
   margin-bottom: 0.5rem;
 }
-.app .add-todo__top__task-priority :nth-child(odd) { /* each prioriteis. ignoring divider spans */
+.app .add-todo__top__task-priority__low-priority {
+  background-color: #C3FFF1;
   border-radius: 4px;
   cursor: pointer;
 }
-.app .add-todo__top__task-priority :nth-child(odd) :first-child { /* label of each input */
+.app .add-todo__top__task-priority__low-priority label {
+  color: #11A483;
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 18.6px;
   padding: 0.125rem 0.5rem 0.125rem 0.5rem;
 }
-.app .add-todo__top__task-priority :nth-child(odd) :last-child { /* radio buttons */
+.app .add-todo__top__task-priority__low-priority input[type=radio] {
   display: none;
-}
-.app .add-todo__top__task-priority__low-priority {
-  background-color: #C3FFF1;
-}
-.app .add-todo__top__task-priority__low-priority label {
-  color: #11A483;
 }
 .app .add-todo__top__task-priority__mid-priority {
   background-color: #FFEFD6;
+  border-radius: 4px;
+  cursor: pointer;
 }
 .app .add-todo__top__task-priority__mid-priority label {
   color: #FFAF37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 18.6px;
+  padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+}
+.app .add-todo__top__task-priority__mid-priority input[type=radio] {
+  display: none;
 }
 .app .add-todo__top__task-priority__high-priority {
   background-color: #FFE2DB;
+  border-radius: 4px;
+  cursor: pointer;
 }
 .app .add-todo__top__task-priority__high-priority label {
   color: #FF5F37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 18.6px;
+  padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+}
+.app .add-todo__top__task-priority__high-priority input[type=radio] {
+  display: none;
 }
 .app .add-todo__top__task-priority__divider {
   border: 1px solid #EBEDEF;
@@ -478,10 +492,13 @@ body {
   flex-direction: column;
   gap: 0.625rem;
 }
+.app .todos-container__task__details__explanations__top {
+  display: flex;
+  gap: 0.75rem;
+}
 .app .todos-container__task__details__explanations__top__title {
   font-size: 1rem;
   font-weight: 700;
-  line-height: 24.8px;
 }
 .app .todos-container__task__details__explanations__description {
   font-size: 0.875rem;

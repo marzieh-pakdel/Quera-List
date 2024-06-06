@@ -86,7 +86,8 @@ function inProgressToDoCardHandler() {
 
     for (i = 0; i < priorities.length; i++) {
       if (todo.priority == priorities[i].value) {
-        todoPriority = priorities[i];
+        selectedPriority = priorities[i].parentElement;
+        todoPriority = selectedPriority.cloneNode(true)
       }
     }
 
@@ -125,6 +126,8 @@ function inProgressToDoCardHandler() {
             </div>`;
 
     todoCard.classList.add("todos-container__task");
+
+    todoCard.children[0].children[1].children[0].append(todoPriority)
 
     todosContainer.append(todoCard);
   });

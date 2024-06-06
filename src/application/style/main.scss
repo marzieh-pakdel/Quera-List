@@ -330,43 +330,73 @@ body {
                 padding: 0.625rem;
                 margin-bottom: 0.5rem;
 
-                :nth-child(odd) { /* each prioriteis. ignoring divider spans */
+                // :nth-child(odd) { /* each prioriteis. ignoring divider spans */
+                //     border-radius: 4px;
+                //     cursor: pointer;
+
+                //     :first-child {  /* label of each input */
+                //         font-size: $font-12;
+                //         font-weight: $font-bold;
+                //         line-height: 18.6px;
+                //         padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+                //     }
+
+                //     :last-child {
+                //         display: none;
+                //     }
+                // }
+
+                &__low-priority {
+                    background-color: $low-priority;
                     border-radius: 4px;
                     cursor: pointer;
 
-                    :first-child {  /* label of each input */
+                    label {
+                        color: $low-priority-text;
                         font-size: $font-12;
                         font-weight: $font-bold;
                         line-height: 18.6px;
                         padding: 0.125rem 0.5rem 0.125rem 0.5rem;
                     }
 
-                    :last-child { /* radio buttons */
+                    input[type=radio] {
                         display: none;
-                    }
-                }
-
-                &__low-priority {
-                    background-color: $low-priority;
-
-                    label {
-                        color: $low-priority-text;
                     }
                 }
 
                 &__mid-priority {
                     background-color: $mid-priority;
+                    border-radius: 4px;
+                    cursor: pointer;
 
                     label {
                         color: $mid-priority-text;
+                        font-size: $font-12;
+                        font-weight: $font-bold;
+                        line-height: 18.6px;
+                        padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+                    }
+
+                    input[type=radio] {
+                        display: none;
                     }
                 }
 
                 &__high-priority {
                     background-color: $high-priority;
+                    border-radius: 4px;
+                    cursor: pointer;
 
                     label {
                         color: $high-priority-text;
+                        font-size: $font-12;
+                        font-weight: $font-bold;
+                        line-height: 18.6px;
+                        padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+                    }
+
+                    input[type=radio] {
+                        display: none;
                     }
                 }
 
@@ -491,11 +521,12 @@ body {
                     gap: 0.625rem;
 
                     &__top {
+                    display: flex;
+                    gap: 0.75rem;
 
                         &__title {
                             font-size: $font-16;
                             font-weight: $font-bold;
-                            line-height: 24.8px;
                         }
                     }
 
