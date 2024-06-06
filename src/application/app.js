@@ -48,6 +48,8 @@ function enableAddTaskBtn() {
 
 addTodoBtn.addEventListener("click", addTodoToList);
 
+const inProgressToDos = [];
+
 function addTodoToList() {
   let selectedPriority;
   for (let i = 0; i < priorities.length; i++) {
@@ -61,13 +63,15 @@ function addTodoToList() {
     priority: selectedPriority,
   };
 
+  inProgressToDos.push(inProgressToDo);
+
   const inProgressToDosCache = JSON.parse(
     localStorage.getItem("inProgressToDos")
   );
 
-  inProgressToDosCache.push(inProgressToDo);
+  inProgressToDos.push(inProgressToDosCache);
 
-  localStorage.setItem("inProgressToDos", JSON.stringify(inProgressToDosCache));
+  localStorage.setItem("inProgressToDos", JSON.stringify(inProgressToDos));
 }
 
 document.addEventListener("DOMContentLoaded", inProgressToDoCardHandler);
@@ -119,8 +123,6 @@ function inProgressToDoCardHandler() {
                 <circle cx="2" cy="16" r="2" fill="#525252" />
               </svg>
             </div>`;
-
-    // todoCardPriorityParent.append(todoPriority)
 
     todoCard.classList.add("todos-container__task");
 
