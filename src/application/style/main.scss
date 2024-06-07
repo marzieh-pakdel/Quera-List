@@ -527,6 +527,11 @@ body {
                         &__title {
                             font-size: $font-16;
                             font-weight: $font-bold;
+                            line-height: 24.8px;
+                        }
+
+                        span {
+                            height: 18.6px;
                         }
                     }
 

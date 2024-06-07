@@ -87,7 +87,7 @@ function inProgressToDoCardHandler() {
     for (i = 0; i < priorities.length; i++) {
       if (todo.priority == priorities[i].value) {
         selectedPriority = priorities[i].parentElement;
-        todoPriority = selectedPriority.cloneNode(true)
+        todoPriority = selectedPriority.cloneNode(true);
       }
     }
 
@@ -127,7 +127,15 @@ function inProgressToDoCardHandler() {
 
     todoCard.classList.add("todos-container__task");
 
-    todoCard.children[0].children[1].children[0].append(todoPriority)
+    todoCard.children[0].children[1].children[0].append(todoPriority);
+
+    const beforeToDoCardStyles = window.getComputedStyle(todoCard, ":before");
+    console.log(beforeToDoCardStyles);
+
+    switch (todo.priority) {
+      case "high-priority":
+        beforeToDoCardStyles.setProperty("background-color", "#11A483");
+    }
 
     todosContainer.append(todoCard);
   });

@@ -499,6 +499,10 @@ body {
 .app .todos-container__task__details__explanations__top__title {
   font-size: 1rem;
   font-weight: 700;
+  line-height: 24.8px;
+}
+.app .todos-container__task__details__explanations__top span {
+  height: 18.6px;
 }
 .app .todos-container__task__details__explanations__description {
   font-size: 0.875rem;
