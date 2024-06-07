@@ -9,9 +9,9 @@ const addTodoBtn = document.getElementById("add-todo-btn");
 const bgImage = document.querySelector(".empty-list");
 const todosContainer = document.querySelector(".todos-container");
 const priorities = document.getElementsByName("priority");
-const todoCardPriorityParent = document.querySelector(
-  ".todos-container__task__details__explanations__top"
-);
+// const todoCardPriorityParent = document.querySelector(
+//   ".todos-container__task__details__explanations__top"
+// );
 
 openAddTodo.addEventListener("click", openAddTodoBox);
 
@@ -132,10 +132,10 @@ function inProgressToDoCardHandler() {
     const beforeToDoCardStyles = window.getComputedStyle(todoCard, ":before");
     console.log(beforeToDoCardStyles);
 
-    switch (todo.priority) {
-      case "high-priority":
-        beforeToDoCardStyles.setProperty("background-color", "#11A483");
-    }
+    // switch (todo.priority) {
+    //   case "high-priority":
+    //     beforeToDoCardStyles.setProperty("background-color", "#11A483");
+    // }
 
     todosContainer.append(todoCard);
   });
