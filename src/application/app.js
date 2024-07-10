@@ -9,11 +9,7 @@ const addTodoBtn = document.getElementById("add-todo-btn");
 const bgImage = document.querySelector(".empty-list");
 const todosContainer = document.querySelector(".todos-container");
 const priorities = document.getElementsByName("priority");
-// const todoCardPriorityParent = document.querySelector(
-//   ".todos-container__task__details__explanations__top"
-// );
-const taskCounter = document.getElementById("task-counter")
-const stylesheet = document.styleSheets[0];
+const taskCounter = document.getElementById("task-counter");
 
 openAddTodo.addEventListener("click", openAddTodoBox);
 
@@ -69,16 +65,6 @@ function addTodoToList() {
   };
 
   inProgressToDos.unshift(inProgressToDo);
-
-  // const inProgressToDosCache = JSON.parse(
-  //   localStorage.getItem("inProgressToDos") || []
-  // );
-
-  // inProgressToDos.push(inProgressToDosCache);
-
-  // inProgressToDosCache.forEach((toDo) => {
-  //   inProgressToDos.push(toDo);
-  // })
 
   localStorage.setItem("inProgressToDos", JSON.stringify(inProgressToDos));
 }
@@ -138,29 +124,29 @@ function inProgressToDoCardHandler() {
 
     todoCard.children[0].children[1].children[0].append(todoPriority);
 
-    // const beforeToDoCardStyles = window.getComputedStyle(todoCard, ":before");
-    // console.log(beforeToDoCardStyles);
+
+    const stylesheet = document.styleSheets[0]
 
     for (let i = 0; i < stylesheet.cssRules.length; i++) {
       let rule = stylesheet.cssRules[i];
-      if (rule.selectorText === '.todos-container__task::before') {
+      if (rule.selectorText === ".todos-container__task::before") {
         switch (todo.priority) {
           case "high-priority":
-            rule.style.backgroundColor = 'blue';
-            break;
+              todoCard.style.backgroundColor('#FF5F37');
+              console.log('high')
+              break;
           case "medium-priority":
-            rule.style.backgroundColor = 'blue';
-            break;
+              todoCard.style.backgroundColor('#FFAF37');
+              break;
           case "low-priority":
-            rule.style.backgroundColor = 'blue';
-            break;
-        }
+              todoCard.style.backgroundColor('#11A483');
+              break;
       }
-  }
+      }
+    }
 
     todosContainer.append(todoCard);
   });
 }
 
-
-taskCounter.innerHTML = inProgressToDos.length
+taskCounter.innerHTML = inProgressToDos.length;
