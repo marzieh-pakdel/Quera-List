@@ -1,4 +1,3 @@
 # Quera-List
-1st phase of Quera Bootcamp project.
-This is the responsive design of Quera list landing page.
-I Used Tailwind CSS in this project.
+Quera Bootcamp project.
+I Used Tailwind CSS for landing page og the project and Scss for todo application.
