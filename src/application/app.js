@@ -48,7 +48,9 @@ function enableAddTaskBtn() {
 
 addTodoBtn.addEventListener("click", addTodoToList);
 
-const inProgressToDos = [];
+const inProgressToDos = JSON.parse(
+  localStorage.getItem("inProgressToDos") || []
+);
 
 function addTodoToList() {
   let selectedPriority;
@@ -57,19 +59,24 @@ function addTodoToList() {
       selectedPriority = priorities[i].value;
     }
   }
+
   const inProgressToDo = {
     title: taskTitleInput.value,
     description: taskDescriptionInput.value,
     priority: selectedPriority,
   };
 
-  inProgressToDos.push(inProgressToDo);
+  inProgressToDos.unshift(inProgressToDo);
 
-  const inProgressToDosCache = JSON.parse(
-    localStorage.getItem("inProgressToDos")
-  );
+  // const inProgressToDosCache = JSON.parse(
+  //   localStorage.getItem("inProgressToDos") || []
+  // );
 
-  inProgressToDos.push(inProgressToDosCache);
+  // inProgressToDos.push(inProgressToDosCache);
+
+  // inProgressToDosCache.forEach((toDo) => {
+  //   inProgressToDos.push(toDo);
+  // })
 
   localStorage.setItem("inProgressToDos", JSON.stringify(inProgressToDos));
 }
@@ -132,10 +139,17 @@ function inProgressToDoCardHandler() {
     const beforeToDoCardStyles = window.getComputedStyle(todoCard, ":before");
     console.log(beforeToDoCardStyles);
 
-    // switch (todo.priority) {
-    //   case "high-priority":
-    //     beforeToDoCardStyles.setProperty("background-color", "#11A483");
-    // }
+    switch (todo.priority) {
+      case "high-priority":
+        todoCard.style.setProperty("--before-background-color", "#11A483");
+        break;
+      case "medium-priority":
+        todoCard.style.setProperty("--before-background-color", "#FFD700");
+        break;
+      case "low-priority":
+        todoCard.style.setProperty("--before-background-color", "#FF6347");
+        break;
+    }
 
     todosContainer.append(todoCard);
   });
