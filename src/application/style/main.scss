@@ -544,8 +544,7 @@ body {
                 }
             }
 
-            &::before {
-                content: "";
+            #task-sidebar {
                 position: absolute;
                 right: 0;
                 top: 50%;

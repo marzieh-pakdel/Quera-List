@@ -510,8 +510,7 @@ body {
   color: #727272;
   line-height: 21.7px;
 }
-.app .todos-container__task::before {
-  content: "";
+.app .todos-container__task #task-sidebar {
   position: absolute;
   right: 0;
   top: 50%;

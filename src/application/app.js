@@ -87,7 +87,8 @@ function inProgressToDoCardHandler() {
     }
 
     const todoCard = document.createElement("div");
-    todoCard.innerHTML = `<div class="todos-container__task__details">
+    todoCard.innerHTML = `
+              <div class="todos-container__task__details">
               <div class="todos-container__task__details__check-input">
                 <input type="checkbox" name="" id="" />
               </div>
@@ -124,26 +125,21 @@ function inProgressToDoCardHandler() {
 
     todoCard.children[0].children[1].children[0].append(todoPriority);
 
+    const todoCardSidebar = document.createElement("span")
+    todoCardSidebar.setAttribute("id", "task-sidebar")    
 
-    const stylesheet = document.styleSheets[0]
-
-    for (let i = 0; i < stylesheet.cssRules.length; i++) {
-      let rule = stylesheet.cssRules[i];
-      if (rule.selectorText === ".todos-container__task::before") {
-        switch (todo.priority) {
-          case "high-priority":
-              todoCard.style.backgroundColor('#FF5F37');
-              console.log('high')
-              break;
-          case "medium-priority":
-              todoCard.style.backgroundColor('#FFAF37');
-              break;
-          case "low-priority":
-              todoCard.style.backgroundColor('#11A483');
-              break;
-      }
-      }
+    switch(todo.priority) {
+      case "high-priority":
+        todoCardSidebar.style.backgroundColor = "#FF5F37"
+        break;
+      case "mid-priority":
+        todoCardSidebar.style.backgroundColor = "#FFAF37"
+        break;
+      default:
+        todoCardSidebar.style.backgroundColor = "#11A483"
     }
+
+    todoCard.append(todoCardSidebar)
 
     todosContainer.append(todoCard);
   });
