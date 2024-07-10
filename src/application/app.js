@@ -12,6 +12,8 @@ const priorities = document.getElementsByName("priority");
 // const todoCardPriorityParent = document.querySelector(
 //   ".todos-container__task__details__explanations__top"
 // );
+const taskCounter = document.getElementById("task-counter")
+const stylesheet = document.styleSheets[0];
 
 openAddTodo.addEventListener("click", openAddTodoBox);
 
@@ -136,21 +138,29 @@ function inProgressToDoCardHandler() {
 
     todoCard.children[0].children[1].children[0].append(todoPriority);
 
-    const beforeToDoCardStyles = window.getComputedStyle(todoCard, ":before");
-    console.log(beforeToDoCardStyles);
+    // const beforeToDoCardStyles = window.getComputedStyle(todoCard, ":before");
+    // console.log(beforeToDoCardStyles);
 
-    switch (todo.priority) {
-      case "high-priority":
-        todoCard.style.setProperty("--before-background-color", "#11A483");
-        break;
-      case "medium-priority":
-        todoCard.style.setProperty("--before-background-color", "#FFD700");
-        break;
-      case "low-priority":
-        todoCard.style.setProperty("--before-background-color", "#FF6347");
-        break;
-    }
+    for (let i = 0; i < stylesheet.cssRules.length; i++) {
+      let rule = stylesheet.cssRules[i];
+      if (rule.selectorText === '.todos-container__task::before') {
+        switch (todo.priority) {
+          case "high-priority":
+            rule.style.backgroundColor = 'blue';
+            break;
+          case "medium-priority":
+            rule.style.backgroundColor = 'blue';
+            break;
+          case "low-priority":
+            rule.style.backgroundColor = 'blue';
+            break;
+        }
+      }
+  }
 
     todosContainer.append(todoCard);
   });
 }
+
+
+taskCounter.innerHTML = inProgressToDos.length
