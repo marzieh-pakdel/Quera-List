@@ -10,6 +10,9 @@ const bgImage = document.querySelector(".empty-list");
 const todosContainer = document.querySelector(".todos-container");
 const priorities = document.getElementsByName("priority");
 const taskCounter = document.getElementById("task-counter");
+const inProgressSelectedPriority = document.getElementById("selected-priority")
+const inProgressSelectedPriorityTextElement = document.getElementById("priority-description")
+const inProgressSelectedPriorityRemoveElement = document.getElementById ("priority-remove")
 
 openAddTodo.addEventListener("click", openAddTodoBox);
 
@@ -18,7 +21,7 @@ function openAddTodoBox() {
   addTodoBox.style.display = "block";
 }
 
-if (todosContainer.childElementCount) {
+if (todosContainer.childElementCount !== 0) {
   bgImage.style.display = "none";
 }
 
@@ -44,17 +47,55 @@ function enableAddTaskBtn() {
   }
 }
 
+priorities.forEach((priority) => {
+  priority.addEventListener("click", selectTaskPriority)
+
+  function selectTaskPriority(event) {
+    priorityTagsBtn.style.display = 'none'
+    taskPriorityBox.style.display = 'none'
+    inProgressSelectedPriority.style.display = 'inline-flex'
+
+    const inProgressSelectedPriorityValue = event.target.value
+
+    switch(inProgressSelectedPriorityValue) {
+      case "high-priority":
+        inProgressSelectedPriority.style.backgroundColor = "#FFE2DB"
+        inProgressSelectedPriorityTextElement.innerHTML = "بالا"
+        inProgressSelectedPriorityTextElement.style.color = "#FF5F37"
+        break;
+      case "mid-priority":
+        inProgressSelectedPriority.style.backgroundColor = "#FFEFD6"
+        inProgressSelectedPriorityTextElement.innerHTML = "متوسط"
+        inProgressSelectedPriorityTextElement.style.color = "#FFAF37"
+        break;
+      default:
+        inProgressSelectedPriority.style.backgroundColor = "#C3FFF1"
+        inProgressSelectedPriorityTextElement.innerHTML = "پایین"
+        inProgressSelectedPriorityTextElement.style.color = "#11A483"
+    }
+   }
+}) 
+
+inProgressSelectedPriorityRemoveElement.addEventListener("click", removePriority)
+
+function removePriority() {
+  inProgressSelectedPriority.style.display = 'none'
+  priorityTagsBtn.style.display = 'flex'
+  // taskPriorityBox.style.display = 'inline-flex'
+  // taskPriorityBox.classList.toggle("priorityBoxToggle");
+  tagBtnIcon.classList.toggle("tagToggle");
+}
+
 addTodoBtn.addEventListener("click", addTodoToList);
 
-const inProgressToDos = JSON.parse(
-  localStorage.getItem("inProgressToDos") || []
-);
+const inProgressToDos = JSON.parse(localStorage.getItem("inProgressToDos")) || [];
 
 function addTodoToList() {
   let selectedPriority;
   for (let i = 0; i < priorities.length; i++) {
     if (priorities[i].checked) {
       selectedPriority = priorities[i].value;
+      break;
     }
   }
 

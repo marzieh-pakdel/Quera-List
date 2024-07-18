@@ -251,6 +251,10 @@ body {
                 input[type="text"] {
                     border: none;
                     line-height: 24.8px;
+                    font-weight: $font-bold;
+                    font-size: $font-16;
+                    color: $gray5;
+                    font-family: 'YekanBakh';
 
                     &::placeholder {
                         font-weight: $font-bold;
@@ -268,6 +272,10 @@ body {
                     resize: none;
                     border: none;
                     line-height: 21.7px;
+                    font-size: $font-14;
+                    font-weight: $font-semibold;
+                    color: $gray4;
+                    font-family: "YekanBakh";
 
                     &::placeholder {
                         font-size: $font-14;
@@ -279,6 +287,28 @@ body {
                     &:focus {
                         outline: none;
                     }
+                }
+            }
+
+            &__selected-priority {
+                padding: 0.225rem 0.5rem;
+                display: none;
+                gap: 0.375rem;
+                align-items: center;
+                border-radius: 4px;
+
+                &__remove {
+                    display: flex;
+                    justify-items: center;
+                    align-items: center;
+                    padding: 0.104rem;
+                    cursor: pointer;
+                }
+
+                &__description {
+                    font-size: $font-14;
+                    font-weight: $font-semibold;
+                    line-height: 21.7px;
                 }
             }
 
@@ -349,14 +379,14 @@ body {
                 &__low-priority {
                     background-color: $low-priority;
                     border-radius: 4px;
-                    cursor: pointer;
-
+                    
                     label {
                         color: $low-priority-text;
                         font-size: $font-12;
                         font-weight: $font-bold;
                         line-height: 18.6px;
                         padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+                        cursor: pointer;
                     }
 
                     input[type=radio] {
@@ -367,7 +397,6 @@ body {
                 &__mid-priority {
                     background-color: $mid-priority;
                     border-radius: 4px;
-                    cursor: pointer;
 
                     label {
                         color: $mid-priority-text;
@@ -375,6 +404,7 @@ body {
                         font-weight: $font-bold;
                         line-height: 18.6px;
                         padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+                        cursor: pointer;
                     }
 
                     input[type=radio] {
@@ -385,7 +415,6 @@ body {
                 &__high-priority {
                     background-color: $high-priority;
                     border-radius: 4px;
-                    cursor: pointer;
 
                     label {
                         color: $high-priority-text;
@@ -393,6 +422,7 @@ body {
                         font-weight: $font-bold;
                         line-height: 18.6px;
                         padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+                        cursor: pointer;
                     }
 
                     input[type=radio] {

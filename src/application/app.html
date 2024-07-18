@@ -410,7 +410,7 @@
           <h2 class="app__today-task__header">تسک‌های امروز</h2>
           <p class="app__today-task__counter">
             <span id="task-counter"></span>
-             تسک را باید انجام دهید.
+            تسک را باید انجام دهید.
           </p>
         </div>
         <button class="app__add-btn">
@@ -459,6 +459,33 @@
                 rows="1"
               ></textarea>
             </div>
+            <span id="selected-priority" class="add-todo__top__selected-priority">
+              <span id="priority-remove" class="add-todo__top__selected-priority__remove">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M6.66406 13.3334L13.3307 6.66675"
+                    stroke="#323233"
+                    stroke-width="0.999925"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M13.3307 13.3334L6.66406 6.66675"
+                    stroke="#323233"
+                    stroke-width="0.999925"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span id="priority-description" class="add-todo__top__selected-priority__description"></span>
+            </span>
             <button id="tag-btn" class="add-todo__top__tag-btn">
               <svg
                 id="tag-btn-icon"
